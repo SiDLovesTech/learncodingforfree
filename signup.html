@@ -1,0 +1,53 @@
+<DOCTYPE html>
+  <head>
+    <style>
+      .rthb {
+        background-color: Black;
+        height: 100px;
+        width: 200px;
+      }
+      .rtha {
+        font-size: 30px;
+        background-color: Black;
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      .rtha:hover {
+        background-color: Red;
+        color: Black;
+      }
+    </style>
+  </head>
+
+  <body>
+      <center><a href="index.html" class="rtha">Return To Home</a></center>
+
+      <form action="https://formspree.io/siddheshadsv@gmail.com"
+      method="POST">
+        <input type="text" placeholder="Username" class="u" id="Username" required>
+        <input type="text" placeholder="Email" class="e" name="Email" required>
+        <input type="password" placeholder="Password" id="password" class="p" required>
+        <input type="password" placeholder="Confirm Password" id="confirm_password" class="cp" required>
+        <button type="submit" class="pure-button pure-button-primary">Confirm Password</button>
+        <input type="submit" id="submit" value="Submit" class="s">
+    </fieldset>
+    <script>
+    var password = document.getElementById("password")
+, confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+if(password.value != confirm_password.value) {
+  confirm_password.setCustomValidity("Passwords Don't Match");
+} else {
+  confirm_password.setCustomValidity('');
+}
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+    </script>
+
+  <body>
